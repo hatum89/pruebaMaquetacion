@@ -1,0 +1,19 @@
+
+<div class="dsc-slider" [ngStyle]="{'min-height': finalHeight}">
+  <div class="dsc-slider__content">
+    <ng-container *ngFor="let section of items;">
+      <div class="dsc-slider__content-item" [ngStyle]="{'background-image': 'url(' + section.image + ')', 'margin-left': section.marginLeft + '%' }">
+        <div class="dsc-slider__content-item-button">
+          <span>SHOP</span>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div class="dsc-slider__steps">
+    <div
+      class="dsc-slider__steps-step
+            dsc-slider__steps-step-{{currentPosition === item.id ? 'active': ''}}"
+      *ngFor="let item of items" (click)="setCurrentPosition(item.id)">
+    </div>
+  </div>
+</div>
