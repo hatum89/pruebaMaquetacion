@@ -3,7 +3,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: absolute;
+  &::before {
+    content: '';
+    height: 30%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(238,174,202,0) 0%, rgba(0,0,0,0.8383075842696629) 100%);
+  }
 
   &__content {
     text-align: center;
@@ -27,31 +36,47 @@
         width: 123px;
         height: 54px;
         border: 2px solid white;
-        position: absolute;
         bottom: 135px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin-bottom: -377px;
         span{
           font-size: 14px;
           letter-spacing: 2px;
           color: white;
+          display: flex;
+          justify-content: center;
+          padding-top: 15px;
         }
       }
+      h1 {
+        color: white;
+        font-weight: 900;
+        text-transform: uppercase;
+        z-index: 1;
+        span {
+          color: #FF8000;
+        }
+      }
+      p {
+        z-index: 1;
+        color: white;
+        font-weight: 500;
+        font-size: 20px;
+      }
+
     }
   }
 
   &__steps {
     position: absolute;
-    bottom: 40px;
+    bottom: 21px;
     width: 100%;
     display: flex;
     justify-content: center;
     &-step {
-      height: 8px;
-      width: 25px;
+      height: 10px;
+      width: 10px;
       margin: 0 5px;
-      border-radius: 5px;
+      border-radius: 50px;
       border: 1px solid rgba(255, 255, 255, 0.7);
       cursor: pointer;
       transition: 0.75s all ease-in-out;
