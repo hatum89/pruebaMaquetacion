@@ -9,13 +9,13 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class BodyComponent implements OnInit {
   public form: FormGroup;
   public data?: string;
-  public counter: number;
   public showMessage1: boolean;
   public showMessage2: boolean;
   public dataMessage1: string;
   public dataMessage2: string;
   public emailMessage: string;
   public emailMessageShow: boolean;
+  arr1 = ['a', 'b', 'c', 'd'];
   constructor( private formBuilder: FormBuilder) {
     this.showMessage1 = false;
     this.showMessage2 = false;
@@ -28,6 +28,7 @@ export class BodyComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.shuffleArray();
   }
 
   save(): void {
@@ -61,5 +62,8 @@ export class BodyComponent implements OnInit {
         this.showMessage2 = false;
       }, 5000);
     }
+  }
+  shuffleArray(): void{
+    this.arr1.sort(() => Math.random() - 0.5);
   }
 }

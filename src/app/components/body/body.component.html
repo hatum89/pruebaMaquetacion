@@ -1,7 +1,7 @@
 <div>
   <form class="container-subscriber" [formGroup]="form">
     <input formControlName="email" type="text" placeholder=" ingresa email aqui">
-    <span type="submit" class="icon-arrow" (click)="save()">
+    <span type="submit" class="icon-arrow" (click)="save()" (keyup)="save()">
     <i class="fa fa-arrow-right" aria-hidden="true"></i>
   </span>
   </form>
@@ -14,5 +14,7 @@
     <h6>{{emailMessage}}</h6>
   </div>
 </div>
-
-
+<h5>Imagenes aleatorias en un array</h5>
+<div *ngFor="let item of arr1">
+  {{item}}
+</div>
