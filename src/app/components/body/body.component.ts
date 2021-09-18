@@ -36,10 +36,11 @@ export class BodyComponent implements OnInit {
       if ( this.data.length % 2 === 0){
         console.log(`Es par ${this.data.length}`);
         this.showMessage1 = true;
-        this.dataMessage1 = `La cantidad de caracteres del mail es par: ${this.data.length}`;
-      } else {
+        this.dataMessage1 = `La cantidad de caracteres del email es par: ${this.data.length}`;
+      }
+      if ( this.data.length % 2 === 1){
         this.showMessage2 = true;
-        this.dataMessage2 = `La cantidad de caracteres del mail es impar ${this.data.length}`;
+        this.dataMessage2 = `La cantidad de caracteres del email es impar ${this.data.length}`;
         console.log();
       }
     }
@@ -47,6 +48,9 @@ export class BodyComponent implements OnInit {
       this.emailMessageShow = true;
       this.emailMessage = 'El formulario es invalido';
       console.log(this.emailMessage);
+    } else {
+      this.emailMessageShow = true;
+      this.emailMessage = 'El formulario es valido';
     }
     this.form.reset('');
   }
