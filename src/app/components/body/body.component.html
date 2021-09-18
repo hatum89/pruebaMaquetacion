@@ -1,0 +1,16 @@
+<div>
+  <form class="container-subscriber" [formGroup]="form">
+    <input formControlName="email" type="text" placeholder=" ingresa email aqui">
+    <span class="icon-arrow" (click)="save()">
+    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+  </span>
+  </form>
+  <h6 *ngIf="showMessage1">{{dataMessage1}}</h6>
+  <br>
+  <h6 *ngIf="showMessage2">{{dataMessage2}}</h6>
+  <div *ngIf="emailMessageShow">
+    <h6>{{emailMessage}}</h6>
+  </div>
+</div>
+
+

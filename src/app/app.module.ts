@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './modules/home/home.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { BodyComponent } from './components/body/body.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import { SliderComponent } from './components/slider/slider.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    SliderComponent
+    SliderComponent,
+    BodyComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
