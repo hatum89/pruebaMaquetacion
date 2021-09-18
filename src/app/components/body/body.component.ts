@@ -31,27 +31,31 @@ export class BodyComponent implements OnInit {
   }
 
   save(): void {
-    if (this.form.valid){
-      this.data = this.form.get('email').value;
-      if ( this.data.length % 2 === 0){
-        console.log(`Es par ${this.data.length}`);
-        this.showMessage1 = true;
-        this.dataMessage1 = `La cantidad de caracteres del email es par: ${this.data.length}`;
-      }
-      if ( this.data.length % 2 === 1){
-        this.showMessage2 = true;
-        this.dataMessage2 = `La cantidad de caracteres del email es impar ${this.data.length}`;
-        console.log();
-      }
-    }
-    if (this.form.invalid){
-      this.emailMessageShow = true;
-      this.emailMessage = 'El formulario es invalido';
-      console.log(this.emailMessage);
+    if (this.form.get('email').value.length === 0) {
+      return;
     } else {
-      this.emailMessageShow = true;
-      this.emailMessage = 'El formulario es valido';
+      if (this.form.valid) {
+        this.data = this.form.get('email').value;
+        if (this.data.length % 2 === 0) {
+          console.log(`Es par ${this.data.length}`);
+          this.showMessage1 = true;
+          this.dataMessage1 = `La cantidad de caracteres del email es par: ${this.data.length}`;
+        }
+        if (this.data.length % 2 === 1) {
+          this.showMessage2 = true;
+          this.dataMessage2 = `La cantidad de caracteres del email es impar ${this.data.length}`;
+          console.log();
+        }
+      }
+      if (this.form.invalid) {
+        this.emailMessageShow = true;
+        this.emailMessage = 'El formulario es invalido';
+        console.log(this.emailMessage);
+      } else {
+        this.emailMessageShow = true;
+        this.emailMessage = 'El formulario es valido';
+      }
+      this.form.reset('');
     }
-    this.form.reset('');
   }
 }
