@@ -8,7 +8,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class BodyComponent implements OnInit {
   public form: FormGroup;
-  public data: string;
+  public data?: string;
   public counter: number;
   public showMessage1: boolean;
   public showMessage2: boolean;
@@ -44,18 +44,22 @@ export class BodyComponent implements OnInit {
         if (this.data.length % 2 === 1) {
           this.showMessage2 = true;
           this.dataMessage2 = `La cantidad de caracteres del email es impar ${this.data.length}`;
-          console.log();
         }
       }
       if (this.form.invalid) {
         this.emailMessageShow = true;
         this.emailMessage = 'El formulario es invalido';
-        console.log(this.emailMessage);
       } else {
         this.emailMessageShow = true;
         this.emailMessage = 'El formulario es valido';
       }
-      this.form.reset('');
+      this.form.reset({
+        email: '',
+        });
+      setTimeout(() => {
+        this.showMessage1 = false;
+        this.showMessage2 = false;
+      }, 5000);
     }
   }
 }
