@@ -61,6 +61,8 @@ export class BodyComponent implements OnInit {
   }
 
   save(): void {
+    this.showMessage1 = false;
+    this.showMessage2 = false;
     if (this.form.get('email').value.length === 0) {
       return;
     } else {
@@ -83,13 +85,9 @@ export class BodyComponent implements OnInit {
         this.emailMessageShow = true;
         this.emailMessage = 'El formulario es valido';
       }
-      this.form.reset({
-        email: '',
-      });
-      setTimeout(() => {
-        this.showMessage1 = false;
-        this.showMessage2 = false;
-      }, 5000);
+      // this.form.reset({
+      //   email: '',
+      // });
     }
   }
   shuffleArray(): void{
