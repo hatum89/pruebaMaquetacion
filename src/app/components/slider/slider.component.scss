@@ -4,15 +4,15 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  &::before {
-    content: '';
-    height: 30%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: linear-gradient(0deg, rgba(238,174,202,0) 0%, rgba(0,0,0,0.8383075842696629) 100%);
-  }
+  //&::before {
+  //  content: '';
+  //  height: 30%;
+  //  width: 100%;
+  //  position: fixed;
+  //  top: 0;
+  //  left: 0;
+  //  background: linear-gradient(0deg, rgba(238,174,202,0) 0%, rgba(0,0,0,0.8383075842696629) 100%);
+  //}
 
   &__content {
     text-align: center;

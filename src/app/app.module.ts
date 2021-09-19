@@ -5,19 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HomeComponent } from './modules/home/home.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { BodyComponent } from './components/body/body.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
     SliderComponent,
-    BodyComponent
+    BodyComponent,
+    ProductComponent
   ],
     imports: [
         BrowserModule,

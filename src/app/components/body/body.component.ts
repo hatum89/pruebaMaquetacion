@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {SliderInterface} from '../../interfaces/slider-interface';
+import {SLIDER_DATA_ITEMS} from '../../constants/img.constant';
 
 @Component({
   selector: 'app-body',
@@ -7,6 +9,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./body.component.scss']
 })
 export class BodyComponent implements OnInit {
+  public sliderData: SliderInterface[] = SLIDER_DATA_ITEMS;
   public form: FormGroup;
   public data?: string;
   public showMessage1: boolean;

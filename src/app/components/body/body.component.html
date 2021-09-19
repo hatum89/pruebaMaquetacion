@@ -1,20 +1,25 @@
-<div>
-  <form class="container-subscriber" [formGroup]="form">
-    <input formControlName="email" type="text" placeholder=" ingresa email aqui">
-    <span type="submit" class="icon-arrow" (click)="save()" (keyup)="save()">
-    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-  </span>
-  </form>
-  <div>
-    <h6 *ngIf="showMessage1">{{dataMessage1}}</h6>
-    <br>
-    <h6 *ngIf="showMessage2">{{dataMessage2}}</h6>
-  </div>
-  <div *ngIf="emailMessageShow">
-    <h6>{{emailMessage}}</h6>
-  </div>
+<div class="row slider-container">
+  <app-slider [items]="sliderData"></app-slider>
 </div>
-<h5>Imagenes aleatorias en un array</h5>
-<div *ngFor="let item of arr1">
-  {{item}}
-</div>
+<app-product></app-product>
+
+<!--<div>-->
+<!--  <form class="container-subscriber" [formGroup]="form">-->
+<!--    <input formControlName="email" type="text" placeholder=" ingresa email aqui">-->
+<!--    <span type="submit" class="icon-arrow" (click)="save()" (keyup)="save()">-->
+<!--    <i class="fa fa-arrow-right" aria-hidden="true"></i>-->
+<!--  </span>-->
+<!--  </form>-->
+<!--  <div>-->
+<!--    <h6 *ngIf="showMessage1">{{dataMessage1}}</h6>-->
+<!--    <br>-->
+<!--    <h6 *ngIf="showMessage2">{{dataMessage2}}</h6>-->
+<!--  </div>-->
+<!--  <div *ngIf="emailMessageShow">-->
+<!--    <h6>{{emailMessage}}</h6>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<h5>Imagenes aleatorias en un array</h5>-->
+<!--<div *ngFor="let item of arr1">-->
+<!--  {{item}}-->
+<!--</div>-->

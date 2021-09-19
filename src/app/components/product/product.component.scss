@@ -1,0 +1,31 @@
+.product-photo {
+  width: 100%;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  .product-image {
+    width: 25%;
+    margin: 0 auto;
+  }
+  .product-name {
+    margin-top: 20px;
+  }
+  .divider {
+    border: 0.5px solid #7070708f;
+    width: 44px;
+    height: 1px;
+    margin: 24px auto 30px auto;
+  }
+  .paragraph {
+    margin-bottom: 40px;
+    color: #585858;
+    padding: 0px 210px;
+  }
+  a{
+    letter-spacing: 2px;
+    color: #5d5d5d;
+  }
+}
