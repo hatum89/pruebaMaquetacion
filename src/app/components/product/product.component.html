@@ -1,16 +1,15 @@
-<div class="row">
-  <div class="col-12 col-sm-6 no-padding">
-    <img class="product-photo" src="assets/images/PufiNapFoto.jpg">
+<div class="row" [ngClass]="{'reverse': isReverse}">
+  <div class="col-12 col-md-6 no-padding">
+    <img class="product-photo" [src]= "productData.photo">
   </div>
-  <div class="product-card col-12 col-sm-6 no-padding">
-    <img class="product-image" src="assets/images/PufiPuffIcono.jpg">
+  <div class="product-card col-12 col-md-6 no-padding">
+    <img class="product-image" [src]="productData.image">
     <h3 class="product-name">
-      Puffi PUFF
+      {{productData.name}}
     </h3>
     <div class="divider"></div>
     <p class="paragraph">
-      Descripción del producto.
-      este es un texto simulado
+      {{productData.description}}
     </p>
     <a href="/">
       > VER MAS
