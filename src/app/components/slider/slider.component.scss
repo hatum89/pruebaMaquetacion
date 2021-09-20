@@ -1,89 +1,27 @@
-.dsc-slider {
-  width: 270%;
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 14px;
+  left: 0;
+  z-index: 15;
   display: flex;
-  align-items: center;
   justify-content: center;
-  //position: absolute;
-  //&::before {
-  //  content: '';
-  //  height: 30%;
-  //  width: 100%;
-  //  position: fixed;
-  //  top: 0;
-  //  left: 0;
-  //  background: linear-gradient(0deg, rgba(238,174,202,0) 0%, rgba(0,0,0,0.8383075842696629) 100%);
-  //}
-
-  &__content {
-    text-align: center;
-    width: 100%;
-    align-self: stretch;
-    display: flex;
-    overflow: hidden;
-    &-item {
-      float: left;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-width: 100%;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      transition: 1s all ease-in;
-      &-button {
-        width: 123px;
-        height: 54px;
-        border: 2px solid white;
-        bottom: 135px;
-        margin-bottom: -377px;
-        span{
-          font-size: 14px;
-          letter-spacing: 2px;
-          color: white;
-          display: flex;
-          justify-content: center;
-          padding-top: 15px;
-        }
-      }
-      h1 {
-        color: white;
-        font-weight: 900;
-        text-transform: uppercase;
-        z-index: 1;
-        span {
-          color: #FF8000;
-        }
-      }
-      p {
-        z-index: 1;
-        color: white;
-        font-weight: 500;
-        font-size: 20px;
-      }
-
-    }
-  }
-
-  &__steps {
-    position: absolute;
-    top: 665px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    &-step {
-      height: 10px;
-      width: 10px;
-      margin: 0 5px;
-      border-radius: 50px;
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      cursor: pointer;
-      transition: 0.75s all ease-in-out;
-      &:hover, &-active{
-        opacity: 0.7;
-        background: #fff;
-      }
-    }
-  }
+  padding-left: 0; // override <ol> default
+  list-style: none;
 }
+
+.carousel-indicators li {
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 10px;
+  height: 10px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  border-radius: 50px;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #fff;
+  transition: opacity .6s ease;
+}
+

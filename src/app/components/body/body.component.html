@@ -1,11 +1,19 @@
-<div class="row slider-container">
-  <app-slider [items]="sliderData"></app-slider>
-</div>
+
+<app-slider></app-slider>
+
 <app-product *ngFor="let product of products; let i = index" [isReverse]="i%2===1" [productData]="product"></app-product>
 
-<div>
+<section class="title">
+  <span class="instagram">INSTAGRAM</span>
+  <span class="espufi">#ESPUFI</span>
+</section>
+
+<section class="middle">
+</section>
+
+<section>
   <form class="container-subscriber" [formGroup]="form">
-    <input formControlName="email" type="text" placeholder=" ingresa email aqui">
+    <input formControlName="email" type="text" placeholder=" ingresa tu email">
     <span type="submit" class="icon-arrow" (click)="save()" (keyup)="save()">
     <i class="fa fa-arrow-right" aria-hidden="true"></i>
   </span>
@@ -18,8 +26,10 @@
   <div *ngIf="emailMessageShow">
     <h6>{{emailMessage}}</h6>
   </div>
-</div>
+</section>
+
 <h5>Imagenes aleatorias en un array</h5>
 <div *ngFor="let item of arr1">
   {{item}}
 </div>
+
