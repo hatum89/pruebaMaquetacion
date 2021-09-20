@@ -8,7 +8,20 @@
   <span class="espufi">#ESPUFI</span>
 </section>
 
-<section class="middle">
+<div class="middle-quarter">
+  <div class="row">
+    <div *ngFor="let img of peoples" class="col-4">
+      <img [src]="img.photo" class="d-block w-100 imgPhoto" alt="...">
+    </div>
+  </div>
+</div>
+
+<section class="title2">
+  <span class="newsletter">NEWSLETTER</span>
+  <span class="subscribe">SUSCRIBETE</span>
+</section>
+<section class="subtitle">
+  <span class="span-subtitle">y enteraté de todas la novedades</span>
 </section>
 
 <section>
@@ -17,19 +30,14 @@
     <span type="submit" class="icon-arrow" (click)="save()" (keyup)="save()">
     <i class="fa fa-arrow-right" aria-hidden="true"></i>
   </span>
+    <div>
+      <h6 *ngIf="showMessage1">{{dataMessage1}}</h6>
+      <h6 *ngIf="showMessage2">{{dataMessage2}}</h6>
+    </div>
+    <div *ngIf="emailMessageShow">
+      <h6>{{emailMessage}}</h6>
+    </div>
   </form>
-  <div>
-    <h6 *ngIf="showMessage1">{{dataMessage1}}</h6>
-    <br>
-    <h6 *ngIf="showMessage2">{{dataMessage2}}</h6>
-  </div>
-  <div *ngIf="emailMessageShow">
-    <h6>{{emailMessage}}</h6>
-  </div>
 </section>
-
-<h5>Imagenes aleatorias en un array</h5>
-<div *ngFor="let item of arr1">
-  {{item}}
-</div>
+<app-footer></app-footer>
 
