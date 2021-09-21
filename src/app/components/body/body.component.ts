@@ -97,7 +97,7 @@ export class BodyComponent implements OnInit {
         }
         if (this.data.length % 2 === 1) {
           this.showMessage2 = true;
-          this.dataMessage2 = `La cantidad de caracteres del email es impar ${this.data.length}`;
+          this.dataMessage2 = `La cantidad de caracteres del email es impar: ${this.data.length}`;
         }
       }
       if (this.form.invalid) {
