@@ -1,10 +1,5 @@
 .product-photo {
   width: 100%;
-
-  &:hover+.product-button {
-      display: block;
-      opacity: 1;
-  }
 }
 .product-card {
   display: flex;
@@ -100,12 +95,11 @@
 }
 
 .product-button {
-  display: none;
   position: absolute;
   bottom: calc(50% - 23px);
   left: calc(50% - 50px);
   z-index: 15;
-  background-color: #fff0;
+  background-color: rgba(210, 0, 0, 0);
   text-transform: uppercase;
   padding: 12px 32.5px;
   font-size: 12px;
@@ -113,6 +107,4 @@
   border: solid 2px #fff;
   font-family: roboto;
   font-weight: bold;
-  opacity: 0;
-  transition: opacity 1s ease;
 }
