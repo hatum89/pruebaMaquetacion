@@ -1,9 +1,15 @@
 .container-subscriber{
   display: flex;
-  justify-content: center;
-  align-content: center;
+  flex-direction: column;
   padding-top: 55px;
   margin-left: -11px;
+  text-align: center;
+  .form-input {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 15px;
+  }
 }
 
 input {
