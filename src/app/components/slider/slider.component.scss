@@ -28,3 +28,23 @@
 .carousel {
   z-index: 0;
 }
+
+.carousel-button {
+  display: none;
+  position: absolute;
+  bottom: calc(26% - 50px);
+  left: calc(50% - 50px);
+  z-index: 15;
+  background-color: #fff0;
+  text-transform: uppercase;
+  padding: 12px 32.5px;
+  font-size: 12px;
+  color: #fff;
+  border: solid 2px #fff;
+  font-family: roboto;
+  font-weight: bold;
+
+  @media screen and (min-width: 768px){
+    display: block;
+  }
+}
