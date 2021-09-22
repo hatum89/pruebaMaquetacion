@@ -90,7 +90,7 @@
   z-index: 16;
   background-color: rgb(18, 25, 37);
   box-shadow: 2px 0px 5px 2px rgb(66,66,66) ;
-  width: 100%;
+  width: 386px;
   height: 100vh;
   position: absolute;
   top:0;
@@ -109,7 +109,7 @@
   }
 }
 .active {
-  transform: translatey(-800px);
+  transform: translate(-600px);
 }
 .opacity {
   background-color: rgba(0,0,0,0.5);
