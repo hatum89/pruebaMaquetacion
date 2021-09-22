@@ -101,7 +101,7 @@
   li {
     padding-top: 54px;
     list-style: none;
-    font-size: 28px;
+    font-size: 24px;
     a {
       text-decoration: none;
       color: white;
@@ -109,7 +109,7 @@
   }
 }
 .active {
-  transform: translate(-600px);
+  transform: translatey(-800px);
 }
 .opacity {
   background-color: rgba(0,0,0,0.5);
