@@ -7,8 +7,8 @@ import {getAttributeValue} from 'codelyzer/util/getAttributeValue';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  public change: boolean;
+  constructor() { this.change = true; }
 
   ngOnInit(): void {
   }
@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
     const iconMenu = document.querySelector('#menu-icon');
     const menu = document.querySelector('#menu');
     iconMenu.addEventListener('click', (e) => {
+      this.change = !this.change;
       menu.classList.toggle('active');
       document.body.classList.toggle('opacity');
     });
