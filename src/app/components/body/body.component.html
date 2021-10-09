@@ -1,7 +1,7 @@
 <app-header></app-header>
-<app-slider></app-slider>
+<app-slider [sliderImage]="sliderImages"></app-slider>
 
-<app-product *ngFor="let product of products; let i = index" [isReverse]="i%2===1" [productData]="product"></app-product>
+<app-product id="part2" *ngFor="let product of products; let i = index" [isReverse]="i%2===1" [productData]="product"></app-product>
 
 <section class="title">
   <span class="instagram">INSTAGRAM</span>
@@ -24,7 +24,7 @@
   <span class="span-subtitle">y enteraté de todas la novedades</span>
 </section>
 
-<section>
+<section id="part1">
   <form class="container-subscriber" [formGroup]="form">
     <div class="form-input">
       <input formControlName="email" type="text" placeholder=" ingresa tu email">
@@ -36,5 +36,5 @@
     <h6 *ngIf="emailMessageShow" >{{emailMessage}}</h6>
   </form>
 </section>
-<app-footer></app-footer>
+<app-footer id="part3"></app-footer>
 

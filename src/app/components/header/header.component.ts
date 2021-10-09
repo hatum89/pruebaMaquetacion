@@ -21,4 +21,18 @@ export class HeaderComponent implements OnInit {
       document.body.classList.toggle('opacity');
     });
   }
+
+  part1(): void{
+    document.getElementById('part1').scrollIntoView({behavior: 'smooth'});
+  }
+
+  part2(): void{
+    document.getElementById('part2').scrollIntoView({behavior: 'smooth'});
+
+  }
+
+  part3(): void {
+    document.getElementById('part3').scrollIntoView({behavior: 'smooth'});
+
+  }
 }

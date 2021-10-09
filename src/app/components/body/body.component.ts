@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {PEOPLES, PRODUCTS} from '../../constants/img.constant';
 import {ODD_TEXT, PAIR_TEXT} from '../../constants/string.constant';
+import {SLIDER_DATA_ITEMS} from '../../constants/img.constant';
 
 @Component({
   selector: 'app-body',
@@ -11,9 +12,8 @@ import {ODD_TEXT, PAIR_TEXT} from '../../constants/string.constant';
 export class BodyComponent implements OnInit {
   @Input() height = 700;
   @Input() isFullScreen = false;
-
+  public sliderImages = SLIDER_DATA_ITEMS;
   public finalHeight: string | number = 0;
-  public currentPosition = 0;
   public products = PRODUCTS;
   public peoples = PEOPLES;
   public form: FormGroup;
@@ -22,12 +22,30 @@ export class BodyComponent implements OnInit {
   public dataMessage: string;
   public emailMessage: string;
   public emailMessageShow = false;
+  public items = [];
   constructor( private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
       email: ['', Validators.compose([
         Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')
       ])]
     });
+    this.items = [
+      {
+        title: '1 slide label',
+        summery: '1 slide label summery',
+        url: 'https://via.placeholder.com/200?text=first'
+      },
+      {
+        title: '2 slide label',
+        summery: '2 slide label summery',
+        url: 'https://via.placeholder.com/200?text=second'
+      },
+      {
+        title: '3 slide label',
+        summery: '3 slide label summery',
+        url: 'https://via.placeholder.com/200?text=third'
+      }
+    ];
   }
 
   ngOnInit(): void {
