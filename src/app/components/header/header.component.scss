@@ -75,6 +75,7 @@
   width: 50px;
   margin: 0 auto;
   padding-left: 20px;
+  padding-top: 9px;
   i {
     font-size: 54px;
     color: white;
@@ -86,20 +87,21 @@
   cursor: pointer;
 }
 .menu-options {
-  z-index: 1;
+  z-index: 16;
   background-color: rgb(18, 25, 37);
   box-shadow: 2px 0px 5px 2px rgb(66,66,66) ;
-  width: 200px;
-  height: 216px;
+  width: 386px;
+  height: 100vh;
   position: absolute;
   top:0;
   left: 0;
   transition: all .5s ease;
-  padding-left: 41px;
+  padding-left: 22%;
   padding-top: 8px;
   li {
-    padding-top: 7px;
+    padding-top: 54px;
     list-style: none;
+    font-size: 24px;
     a {
       text-decoration: none;
       color: white;
@@ -113,9 +115,7 @@
   background-color: rgba(0,0,0,0.5);
   transition: all .5s ease;
 }
-.menu-options ul li:hover {
-  background-color: rgba(38, 28, 61, 0.79);
-}
+
 @media screen and (max-width: 735px){
   .shadow-nav,.header-nav {
     display: none;

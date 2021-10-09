@@ -1,5 +1,3 @@
-import {SliderInterface} from '../interfaces/slider-interface';
-
 export const PRODUCTS = [
   {
     photo: 'assets/images/PufiRainFoto.jpg',
@@ -48,35 +46,35 @@ export const PEOPLES = [
   },
 ];
 
-// export const SLIDER_DATA_ITEMS: SliderInterface[] = [
-//   {
-//     id: 1,
-//     title: {
-//       first: 'TITULO',
-//       second: 'Principal'
-//     },
-//     subtitle: 'Esto es una gran descripción',
-//     link: '/',
-//     image: 'assets/images/FotoPrincipal.jpg'
-//   },
-//   {
-//     id: 2,
-//     title: {
-//       first: 'TITULO',
-//       second: 'Segundo'
-//     },
-//     subtitle: 'Esto es una gran descripción',
-//     link: '/',
-//     image: 'assets/images/FotoPrincipal.jpg'
-//   },
-//   {
-//     id: 3,
-//     title: {
-//       first: 'TITULO',
-//       second: 'Tercero'
-//     },
-//     subtitle: 'Esto es una gran descripción',
-//     link: '/',
-//     image: 'assets/images/FotoPrincipal.jpg'
-//   }
-// ];
+export const SLIDER_DATA_ITEMS = [
+  {
+    id: 1,
+    title: {
+      first: 'TITULO',
+      second: 'Principal'
+    },
+    subtitle: 'Esto es una gran descripción',
+    link: '/',
+    image: 'assets/images/FotoPrincipal.jpg'
+  },
+  {
+    id: 2,
+    title: {
+      first: 'TITULO',
+      second: 'Segundo'
+    },
+    subtitle: 'Esto es una gran descripción',
+    link: '/',
+    image: 'assets/images/FotoPrincipal.jpg'
+  },
+  {
+    id: 3,
+    title: {
+      first: 'TITULO',
+      second: 'Tercero'
+    },
+    subtitle: 'Esto es una gran descripción',
+    link: '/',
+    image: 'assets/images/FotoPrincipal.jpg'
+  }
+];
